@@ -5,7 +5,7 @@ from letter_state import LetterState
 import random
 
 def main():
-    
+    print("\nClassic wordle, with a twist! Try to guess the seven-letter pokemon!")
     word_set = load_word_set("data/wordle_words.txt")
     secret = random.choice(list(word_set))
 
@@ -21,10 +21,10 @@ def main():
                 + Fore.RESET)
             continue
 
-        if not x in word_set:
+        if not x or x.lower in word_set:
             print(
                 Fore.RED
-                + f"{x} is not a valid word!"
+                + f"{x} is not a valid pokemon!"
                 + Fore.RESET
             )
             continue
@@ -34,9 +34,12 @@ def main():
 
     if wordle.is_solved:
         print("You've solved the puzzle.")
+        print(f"The secret pokemon was: {wordle.secret}")
+        print(f"Learn more at https://en.wikipedia.org/wiki/{wordle.secret}")
     else:
         print("You've failed to solve the puzzle.")
-        print(f"The secret word was: {wordle.secret}")
+        print(f"The secret pokemon was: {wordle.secret}")
+        print(f"Learn more at https://en.wikipedia.org/wiki/{wordle.secret}")
 
     
 def display_results(wordle: Wordle):
@@ -76,7 +79,7 @@ def convert_result_to_color(result: List[LetterState]):
         result_with_color.append(colored_letter)
     return " ".join(result_with_color)
 
-def draw_border_around(lines: List[str], size: int=9, pad: int=1):
+def draw_border_around(lines: List[str], size: int=13, pad: int=1):
     
     content_length = size + pad * 2
     top_border = "┌" + "─" * content_length + "┐"
