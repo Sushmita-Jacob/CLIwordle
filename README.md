@@ -12,3 +12,5 @@ Past the tutorial, the following features were added/changed:
 - Allows lowercase guesses to still be valid
 
 The number seven was chosen because seven-letter pokemon was most frequent in the data set.
+
+To play, download the dist folder (not just the executable) and run play_wordle.exe inside of it. It is important to do this because the game needs information from the data folder, which is also inside of the dist folder.

@@ -12,7 +12,7 @@ def main():
     wordle = Wordle(secret)
 
     while wordle.can_attempt:
-        x = input("\nType your guess: ")
+        x = input("\nType your guess: ").strip().upper()
 
         if len(x) != wordle.WORD_LENGTH:
             print(
@@ -21,7 +21,7 @@ def main():
                 + Fore.RESET)
             continue
 
-        if not x or x.lower in word_set:
+        if not x in word_set:
             print(
                 Fore.RED
                 + f"{x} is not a valid pokemon!"
@@ -43,7 +43,7 @@ def main():
 
     
 def display_results(wordle: Wordle):
-    print("\nYour results so far:...\n")
+    print("\nYour results so far...\n")
     print(f"\nYou have {wordle.remaining_attempts} attempts remaining.\n")
     
     lines = []
