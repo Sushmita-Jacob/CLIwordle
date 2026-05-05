@@ -1,4 +1,4 @@
-**CLI Pokemon Wordle**
+# **CLI Pokemon Wordle**
 
 This project is a clone of the popular New York Times game, Wordle. Wordle is one of many NYT games, including Crossword, Connections, Spelling Bee. 
 
@@ -13,4 +13,4 @@ Past the tutorial, the following features were added/changed:
 
 The number seven was chosen because seven-letter pokemon was most frequent in the data set.
 
-To play, download the dist folder (not just the executable) and run play_wordle.exe inside of it. It is important to do this because the game needs information from the data folder, which is also inside of the dist folder.
+**To play, download the dist folder (not just the executable) and run play_wordle.exe inside of it.** It is important to do this because the game needs information from the data folder, which is also inside of the dist folder.
