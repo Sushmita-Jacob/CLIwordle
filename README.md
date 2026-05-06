@@ -1,3 +1,7 @@
+
+
+https://github.com/user-attachments/assets/dc502925-eb3b-4eea-afaf-6aa5525bbab9
+
 # **CLI Pokemon Wordle**
 
 This project is a clone of the popular New York Times game, Wordle. Wordle is one of many NYT games, including Crossword, Connections, Spelling Bee. 
